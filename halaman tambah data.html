@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data - Dashboard Dosen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4B0082;
+            color: white;
+            margin: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            margin: 5px 0;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            display: block;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .sidebar a:hover, .sidebar .active {
+            background-color: purple;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #4B0082;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .header button.logout {
+            background-color: red;
+        }
+
+        .header .semester {
+            background-color: #1e3d7b;
+        }
+
+        .header .time {
+            background-color: green;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .menu button {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .menu button.active {
+            background-color: #1e3d7b;
+        }
+
+        .create-task {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .task-type {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .task-type button {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .task-type button.active {
+            background-color: #1e3d7b;
+        }
+
+        .task-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .task-details input,
+        .task-details textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .task-details button {
+            background-color: #1e3d7b;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .task-details .attachments {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .task-details .attachments button {
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+
+            .header button {
+                padding: 5px;
+            }
+
+            .menu button {
+                padding: 5px 10px;
+                margin: 0 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="profile.png" alt="Nama Dosen">
+        <p>NAMA DOSEN</p>
+        <a href="halaman dashboard.html"><span class="icon">🏠</span>Dashboard</a>
+        <a href="#"><span class="icon">👤</span>Lihat Profil</a>
+        <a href="#"><span class="icon">📅</span>Daftar Kehadiran</a>
+        <a href="#"><span class="icon">🗓</span>Jadwal Mengajar</a>
+        <a href="halaman tambah data.html"><span class="icon">➕</span>Tambah Data</a>
+        <a href="halaman rekap nilai.html"><span class="icon">📊</span>Rekapitulasi Nilai</a>
+        <a href="#"><span class="icon">✉</span>E-Mail</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>TAMBAH DATA</h1>
+            <button type="button" id="createAccountButton" class="logout">LOGOUT</button>
+        </div>
+        <div class="header">
+            <button class="semester">TAHUN AJARAN 2023-2024</button>
+            <button class="time">JAM/HARI-TANGGAL</button>
+        </div>
+        <div class="menu">
+            <button>FORUM</button>
+            <button class="active">TUGAS KELAS</button>
+            <button>ANGGOTA KELAS</button>
+        </div>
+        <div class="create-task">
+            <div class="task-type">
+                <button class="active">TUGAS</button>
+                <button>KUIS</button>
+                <button>PERTANYAAN</button>
+                <button>BAHAN AJAR</button>
+            </div>
+            <div class="task-details">
+                <input type="text" placeholder="JUDUL">
+                <textarea placeholder="Petunjuk (Opsional)"></textarea>
+                <div class="attachments">
+                    <button>Lampirkan</button>
+                    <button>TUGASKAN</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; 2024 Dashboard Dosen. All rights reserved.
+        </div>
+    </div>
+    <script>
+        document.getElementById("createAccountButton").onclick = function () {
+            location.href = "halaman login.html";
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas AMIKOM Yogyakarta</title>
+    <style>
+        body {
+            background-color: #4b0082;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #808080;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .container h1 {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .container .login a {
+            display: inline-block;
+            width: 80%;
+            background-color: #00006b;
+            border: none;
+            padding: 10px;
+            border:1px solid #00006b;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        .container .login a:hover {
+            background-color: #00006b;
+        }
+        .container .signup {
+            margin-top: 20px;
+            color: #000;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .container .signup a {
+            display: inline-block;
+            width: 85%;
+            background-color: #ff8c00;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        .container .signup a:hover {
+            background-color: #e67e00;
+        }
+        .container .terms {
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #000;
+        }
+        .container .terms a {
+            color: #ff8c00;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo Universitas">
+        <h1>UNIVERSITAS AMIKOM YOGYAKARTA</h1>
+        <p>Silahkan Login menggunakan Nomor Induk dan Password anda</p>
+        <form action="/dashboard" method="post">
+            <label for="nomor-induk">Nomor Induk Dosen</label>
+            <input type="text" id="nomor-induk" name="nomor-induk" placeholder="Nomor Induk Dosen" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </form>
+        <div class="login">
+            <a href="halaman dashboard.html">Login</a>
+        </div>
+        <div class="signup">
+            Buat akun
+            <a href="halaman register.html">Sign Up</a>
+        </div>
+        <div class="terms">
+            Dengan mengklik lanjutkan, Anda menyetujui 
+            <a href="#">Ketentuan Layanan</a> dan 
+            <a href="#">Kebijakan Privasi</a> kami.
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Universitas AMIKOM Yogyakarta
+    </div>
+</body>
+</html>

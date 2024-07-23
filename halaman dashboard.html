@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Dosen - Universitas Amikom Yogyakarta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4B0082;
+            color: white;
+            margin: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            margin: 5px 0;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            display: block;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .sidebar a:hover, .sidebar .active {
+            background-color: purple;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #4B0082;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .header .logout a{
+            background-color: red;
+            border: none;
+            border:11px  solid red;
+            color: white;
+            font-size: 1em;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .schedule, .qr-code {
+            background-color: #333;
+            padding: 5px;
+            border-radius: 10px;
+            width: 48%;
+        }
+
+        .schedule table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .schedule th, .schedule td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .schedule th {
+            background-color: #1e3d7b;
+        }
+
+        .schedule .room {
+            background-color: #b84a36;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: auto;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="profile.png" alt="Nama Dosen">
+        <p>NAMA DOSEN</p>
+        <a href="halaman dashboard.html"><span class="icon">🏠</span>Dashboard</a>
+        <a href="#"><span class="icon">👤</span>Lihat Profil</a>
+        <a href="#"><span class="icon">📅</span>Daftar Kehadiran</a>
+        <a href="#"><span class="icon">🗓</span>Jadwal Mengajar</a>
+        <a href="halaman tambah data.html"><span class="icon">➕</span>Tambah Data</a>
+        <a href="halaman rekap nilai.html"><span class="icon">📊</span>Rekapitulasi Nilai</a>
+        <a href="#"><span class="icon">✉️</span>E-Mail</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>DASHBOARD DOSEN</h1>
+            <h1 class="logout">
+            <a href="halaman login.html">LOGOUT</a>
+        </div>
+        <div class="header">
+            <button class="semester">TAHUN AJARAN 2023-2024</button>
+            <button class="time">JAM/HARI-TANGGAL</button>
+        </div>
+        <div class="dashboard">
+            <div class="schedule">
+                <h2>JADWAL MENGAJAR</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>HARI/JAM</th>
+                            <th class="room">RUANG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SENIN/1-1-24/07.00-08.40</td>
+                            <td>R.02.03.09</td>
+                        </tr>
+                        <tr>
+                            <td>SELASA/2-1-24/08.40-10.30</td>
+                            <td>R.07.01.02</td>
+                        </tr>
+                        <tr>
+                            <td>RABU/3-1-24/1.20-15.00</td>
+                            <td>R.05.02.03</td>
+                        </tr>
+                        <tr>
+                            <td>KAMIS/4-1-24/15.30-17.30</td>
+                            <td>R.02.04.07</td>
+                        </tr>
+                        <tr>
+                            <td>JUMAT/5-1-24/7.00-8.40</td>
+                            <td>R.04.02.05</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="qr-code">
+                <h2>KODE QR</h2>
+                <img src="qrcode.png" alt="QR Code">
+            </div>
+        </div>
+        <div class="footer">
+    </div>
+</body>
+</html>
